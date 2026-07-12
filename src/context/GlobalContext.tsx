@@ -351,7 +351,7 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
     
     // Conectar ao backend
     import('socket.io-client').then(({ io }) => {
-      const newSocket = io(process.env.NEXT_PUBLIC_API_URL || 'http://37.60.227.236:4040');
+      const newSocket = io(process.env.NEXT_PUBLIC_API_URL || 'http://213.136.70.2:4040');
       setSocketInstance(newSocket);
 
       newSocket.on('connect', () => {
